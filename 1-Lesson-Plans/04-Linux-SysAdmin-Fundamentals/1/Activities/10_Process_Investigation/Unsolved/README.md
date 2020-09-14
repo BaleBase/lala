@@ -42,7 +42,7 @@ Please read the following instructions and complete the steps.
 
     - Sort by other users on the system that may be of interest.
   
-     **Hint**: In the previous exercise, you found a home folder for a user who should not be on this system. Is that user running processes?
+     **Hint**: In the previous exercise, you found a home directory for a user who should not be on this system. Is that user running processes?
      
 **Bonus**     
 

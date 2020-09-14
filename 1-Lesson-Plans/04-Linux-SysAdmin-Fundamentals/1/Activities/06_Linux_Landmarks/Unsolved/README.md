@@ -23,7 +23,7 @@ To setup this activity, run the following command: `sudo bash /home/instructor/D
 
 Here is the audit checklist provided by your Senior Administrator:
 
-1. Create a `research` directory in your home folder, to place notes of your findings.
+1. Create a `research` directory in your home directory, to place notes of your findings.
 
 2. Access the /var/log directory and check that the `auth.log` exists. You need this to check for suspicious logins.
 
