@@ -43,7 +43,7 @@ Please read the following instructions and complete the steps.
     - Sort by other users on the system that may be of interest.
   
      **Hint**: In the previous exercise, you found a home directory for a user who should not be on this system. Is that user running processes?
-     
+
 **Bonus**     
 
 4. Next, take a static "snapshot" of all currently running processes, and save it to a file in your home directory with the name `currently_running_processes`.
@@ -57,7 +57,7 @@ Please read the following instructions and complete the steps.
 
 6.  `Kill` all processes launched by the user who started the command you just killed. 
 
-    - Use Google andr the man pages to identify a command and flag that will let you kill all processes owned by a specific user.
+    - Use Google and the man pages to identify a command and flag that will let you kill all processes owned by a specific user.
 
  -------
 

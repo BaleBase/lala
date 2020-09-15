@@ -31,7 +31,6 @@ Use the following links to answer the questions below:
 
 4. What is the most widely used Linux desktop environment?
 
-
 ### B. Use Cases
 
 Identify which distribution(s) is most appropriate for each situation. There may be more than one correct answer.
@@ -62,7 +61,7 @@ Identify which distribution(s) is most appropriate for each situation. There may
 
 4. What is SELinux? Which distributions implement SELinux by default?  
 
-5. If you were deciding between versions of Ubuntu Server and wanted one that would remain stable over time, which version would you choose?
+5. If you were deciding between versions of Ubuntu Server and wanted one that will remain stable over time, which version would you choose?
 
 6. What are some security implications of using free and open source software or forks of popular Linux distributions?
 
