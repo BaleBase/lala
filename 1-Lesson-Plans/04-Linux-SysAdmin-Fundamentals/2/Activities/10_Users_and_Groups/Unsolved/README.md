@@ -35,7 +35,7 @@ Begin in the command line inside your lab environment.
     - Record the output from this series of commands to a new file in your research folder.
 
 4. Document in your research folder anything suspicious related to any of the users.
-    - Hint: Are there any users that shouldn't be there?
+    - Hint: Are there any users that shouldn't be there?  Are any of them able to use `sudo` that shouldn't?
 
 5. Make sure you have a copy of the home folder for any rogue users and then remove any users from the system that should not be there. Make sure to remove their home folders as well.  
 
@@ -44,7 +44,7 @@ Begin in the command line inside your lab environment.
 6. Verify that all non-admin users are part of the group `developers`.
     - If the `developers` group doesn't exist, create it and add the users.
 
-7. The users `adam`, `billy`, `sally` and `max` should _only_ be members of the `developers` group and their own groups. If you find any groups other than this, document and remove it.
+7. The users `adam`, `billy`, `sally` and `max` should _only_ be members of the `developers` group and their own groups. If you find any groups other than this, document the group and remove it.
 
 ---
 

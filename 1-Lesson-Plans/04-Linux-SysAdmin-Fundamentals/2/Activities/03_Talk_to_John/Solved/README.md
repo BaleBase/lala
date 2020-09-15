@@ -1,6 +1,10 @@
 ## Solution Guide: Let's Talk to John
 
-In this activity, you used the program `john the ripper` to crack the passwords for several users on the system. 
+In this activity, your senior administrator has asked you to audit the strength of users' passwords using the `john` program and document any passwords that you find.
+
+To complete these tasks, you will use the program `john the ripper` on the password file you viewed from Day 1. You will use `john` to crack the passwords for several users on the system. 
+
+:warning: `john the ripper` should have been installed during the **Installing Packages** activity from the previous class. 
 
 ### Solutions
 
@@ -24,6 +28,7 @@ In this activity, you used the program `john the ripper` to crack the passwords 
       ```
             
 3. Run `sudo john shadow_copy`
+     - **Note**: This command is all you need to crack passwords.
 
 4. This will take some time, but let John the Ripper run, and take note of any passwords you find 
    

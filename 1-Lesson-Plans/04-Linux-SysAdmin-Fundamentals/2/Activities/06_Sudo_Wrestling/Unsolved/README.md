@@ -16,7 +16,7 @@ In this activity, you will explore the `sudo + less` exploit, shown in the previ
 
 2. Determine what `sudo` privileges the sysadmin user has.
 
-3. In a text document inside your research folder, record what `sudo` access each of the users on the system has.
+3. In a text document inside your research directory, record what `sudo` access each of the users on the system has.
 
 4. There is one user who has `sudo` access for the `less` command. Find that user and complete the following:
     - Switch to that user by using the password found in the previous activity.
@@ -24,11 +24,11 @@ In this activity, you will explore the `sudo + less` exploit, shown in the previ
     - Exit back to the command line.
     - Exit that user.
     
-**Bonus**    
+**Bonus**
 
 5. From the sysadmin user, switch to the root user.
 
-6. Read the `sudoers` file to see if there are any users listed there with `sudo` privileges.
+6. Read the `sudoers` file to see if there are any users listed with `sudo` privileges.
 
 7. Edit the `sudoers` file so that only the administrator user has access.
 

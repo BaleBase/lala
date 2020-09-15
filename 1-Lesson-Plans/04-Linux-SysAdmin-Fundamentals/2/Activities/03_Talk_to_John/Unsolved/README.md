@@ -1,6 +1,5 @@
 ## Activity File: Let's Talk to John
 
-
 In this activity, your senior administrator has asked you to audit the strength of users' passwords using the `john` program and document any passwords that you find.
 
 To complete these tasks, you will use the program `john the ripper` on the password file you viewed from Day 1. You will use `john` to crack the passwords for several users on the system. 
