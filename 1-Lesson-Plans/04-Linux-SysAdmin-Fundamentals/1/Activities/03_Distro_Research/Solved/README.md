@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ##  Solutions File: Distribution Research
 
 - Recently, your organization experienced a number of breaches involving servers running outdated Linux distributions.
@@ -22,6 +23,11 @@ Use the following links to answer the questions below:
 - [Mint Breach](https://www.techrepublic.com/article/why-the-linux-mint-hack-is-an-indicator-of-a-larger-problem/)
 
 ### Questions and Answers
+=======
+## Solutions File: Distro Research
+
+### Questions & Answers
+>>>>>>> 5e7628b1fe1ff96f54830488bfafc2a281131ba2
 
 1. Which distribution is most flexible and best suited for day-to-day and administrative tasks?
     - **Solution**: Ubuntu
@@ -35,6 +41,7 @@ Use the following links to answer the questions below:
 4. What is the most widely used Linux desktop environment?
     - **Solution**: Ubuntu
     
+<<<<<<< HEAD
 
 ### B. Use Cases
 
@@ -60,6 +67,15 @@ Identify which distribution(s) is most appropriate for each situation. There may
 
 1. What is a "headless server"? Does Ubuntu make a headless server variant? What about Fedora? CentOS?
     - **Solution**: A command line-only server without a desktop environment, keyboard or mouse.  Yes, all three of them do.
+=======
+#### Bonus Questions & Answers
+
+1. What is a "headless server"?
+    - **Solution**: A command line-only server without a desktop environment.
+
+    -  1a. Does Ubuntu make a headless server variant? What about Fedora? CentOS?
+         - **Solution**: Yes, all three of them do.
+>>>>>>> 5e7628b1fe1ff96f54830488bfafc2a281131ba2
 
 2. What distribution is Ubuntu based on? What about Kali?
     - **Solution**: They are both based on Debian.
@@ -70,13 +86,20 @@ Identify which distribution(s) is most appropriate for each situation. There may
 4. What is SELinux? Which distributions implement SELinux by default?  
     - **Solution**: SELinux is a built-in file permissions security enhancement developed by the NSA. CentOS and Fedora have it implemented by default.
 
+<<<<<<< HEAD
 5. If you were deciding between versions of Ubuntu Server and wanted one that will remain stable over time, which version would you choose?
+=======
+5. If you were deciding between versions of Ubuntu Server and wanted one  that will remain stable over time, which version would you choose?
+>>>>>>> 5e7628b1fe1ff96f54830488bfafc2a281131ba2
     - **Solution**: You would choose the "Long Term Support" or _LTS_ version. The latest version is one that will have continual updates and changes. The _LTS_ version will remain stable and only changes about once a year.
 
 6. What are some security implications of using free and open source software or forks of popular Linux distributions?
     - **Solution**: As demonstrated in the Mint OS article, _open source_ means that anyone can contribute. This makes it somewhat easy for an attacker with programing skills to attack. Because of this users, must be vigilant about where they get their software.
 
+<<<<<<< HEAD
 -------
+=======
+>>>>>>> 5e7628b1fe1ff96f54830488bfafc2a281131ba2
 
 
 #### Summary
