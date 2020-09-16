@@ -1,6 +1,6 @@
 ## Activity File: Service Users
 
-- In the previous activity, we stopped and removed a few old services from the system.
+In the previous activity, we stopped and removed a few old services from the system. In this activity, we remove those users from the system and add a new service user for `tripwire`.
 
 - In this activity, you will continue auditing the same server for your senior administrator.
 

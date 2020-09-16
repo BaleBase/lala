@@ -14,19 +14,24 @@ You'll use the same lab environment you used in the previous exercises:
 
 Your senior administrator has asked you to complete the following:
 
+Start by inspecting the file permissions on each of the files listed, and determine if they are already set correctly or if you need to change the permissions.
+
+** Hint: **
+  - Run: `ls -l <file1> <file2> <file3>`
+
 1.  Set permissions on `/etc/shadow` to allow only `root` read and write access.
 
-2. Set permissions on `/etc/gshadow` to allow only `root` read and write access.
+2.  Set permissions on `/etc/gshadow` to allow only `root` read and write access.
 
-3. Set permissions on `/etc/group` to allow `root` read and write access, and all others read access only.
+3.  Set permissions on `/etc/group` to allow `root` read and write access, and all others read access only.
 
-4. Set permissions on `/etc/passwd` to allow `root` read and write access, and all others read access only.
+4.  Set permissions on `/etc/passwd` to allow `root` read and write access, and all others read access only.
 
 **Bonus**
 
 5. Verify all accounts have passwords.
 
-6. Recall that if any user has the UID of `0`, the system thinks they are `root`. Verify that no users have UID of `0` besides `root`. If you find one that does, change its UID to any value greater than `1000`.
+6. Recall that if any user has the UID of `0`, the system thinks they are `root`. Verify that no users have UID of `0` besides `root`. If you find one that does, change its UID to any value greater than or equal to `1000`.
 
 7. Provide a list of all permission changes that you make in a text file in your research directory.
 
