@@ -1,8 +1,16 @@
 ## Solution Guide: Service Users
 
-In the previous activity, we stopped and removed a few old services from the system. In this activity, we removed those users from the system and added a new service user for `tripwire`.
+In the previous activity, we stopped and removed a few old services from the system. In this activity, we remove those users from the system and add a new service user for `tripwire`.
 
-To complete this activity, we needed to:
+- In this activity, you will continue auditing the same server for your senior administrator.
+
+- The senior administrator would like you to remove any old service users from the system and create a new user that will be dedicated to running the Tripwire program.
+
+- To complete this activity, you will use the `adduser` and `deluser` commands with the correct flags to clean up the system and create this new Tripwire user. 
+
+    - Tripwire can only be run as `root`, so you will also need to add a line to the `sudoers` file to allow this.
+
+To complete this activity, we need to:
 
 - Use the `deluser` command to remove lingering service users.
 
@@ -18,7 +26,13 @@ To complete this activity, we needed to:
 
 **Note: The bonus solution is included.**
 
-1. The first step is to remove any service users associated with the following services: `ftp` and `dovecot`:
+1. To clean up our system and to prevent any unwanted abuse of remnant service users, remove the following service users associated with the services that you removed in the previous activity:
+
+    - Service users for the `vsftpd` service
+
+    - **Note**: If you are stuck on where to find these service users, you can search through `/etc/passwd` for clues.
+
+   The first step is to remove any service users associated with the following services: `ftp` and `dovecot`:
  
     - We can quickly find these users with `grep "ftp\|dove" /etc/passwd`
 
@@ -26,7 +40,17 @@ To complete this activity, we needed to:
 
         - For example, `sudo deluser --remove-all-files dovecot`
 
-2. We will create a `tripwire` user that will be dedicated to running Tripwire:
+2. Create a `tripwire` user that will be dedicated to running Tripwire.
+
+    - Verify that this user is a service user.
+
+    - Verify that this user does not have a home folder.
+
+    - Verify that this user is locked without a password.
+
+    - Verify that this user does not have a login shell.
+
+   We will create a `tripwire` user that will be dedicated to running Tripwire:
 
     - Run `sudo adduser --system --no-create-home tripwire`
 
@@ -44,7 +68,9 @@ To complete this activity, we needed to:
 
     Note that `usr/sbin/nologin` is at the end of the Tripwire line.
 
-3. We will add a line to the `sudoers` file in order to allow this user to run only `tripwire` using `sudo` privileges.
+3. Add a line to the `sudoers` file to allow this user to run only `tripwire` using `sudo` privileges.
+
+   We will add a line to the `sudoers` file in order to allow this user to run only `tripwire` using `sudo` privileges.
 
     - Run `sudo visudo`
 
@@ -58,13 +84,22 @@ To complete this activity, we needed to:
         tripwire ALL= NOPASSWD: /usr/sbin/tripwire
         ```
 
-4. We will change the permission of the `tripwire` program to only allow the `owner` to execute it.
+4. Change the permission of the `tripwire` program to only allow the `owner` to execute.
+
+   We will change the permission of the `tripwire` program to only allow the `owner` to execute it.
 
     - Run `which tripwire` to locate the `tripwire` package.
 
     - Run `sudo chmod 700 /usr/sbin/tripwire`
 
     - Run `ls -l /usr/sbin/tripwire` to verify.
+
+**Bonus**:
+
+5. Remove the following service users associated with the services that you removed in the previous bonus activity:
+
+   - Service users for any `dovecot`-related services.
+        - For example, `sudo deluser --remove-all-files dovecot`
 
 ---
 
