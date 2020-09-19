@@ -4,26 +4,26 @@
 
 In this two-part activity, you are a junior administrator at *Rezifp Pharma Inc.*
 
-- The company conducts clinical trials on drugs for oncology, immunology, and vaccines.  In recent weeks, there have been a series of malware attacks. The company is now strengthening its backup activities.   
+- The company conducts clinical trials on drugs for oncology, immunology, and vaccines.  In recent weeks, there have been a series of malware attacks. The company is now strengthening its backup activities.
 
-- In response to the malware attacks, your department has decided to create daily *full backups* of the files associated with the E-Prescription Treatment database, which is the main system for many departments. 
+- In response to the malware attacks, your department has decided to create daily *full backups* of the files associated with the E-Prescription Treatment database, which is the main system for many departments.
 
 You have been tasked with:
 
 - Creating a name for the `tar` archive using the department's standard naming convention.
- 
+
 - Creating daily full backups of the directories and files in the `~/Documents/epscript` directory.
 
 - Printing the file permission, owner, size, date, and time for each file in the archive.
- 
+
 - Verifying the archive after it is written to check for errors.
 
 - Creating a file containing the output of the `tar` command for later review by the SysOps team, which will check file structure, permissions, and errors.
 
 #### Lab Environment
 
-- To complete the activity, log into the lab environment using the following credentials:  
-    - Username: `sysadmin` 
+- To complete the activity, log into the lab environment using the following credentials:
+    - Username: `sysadmin`
     - Password: `cybersecurity`
 
 #### Instructions
@@ -36,8 +36,8 @@ You have been tasked with:
 
 3. Prepare the directory for backup by standardizing the filenames:
 
-    - Your department uses the [ISO 8601](https://www.cl.cam.ac.uk/~mgk25/iso-time.html) standard for representing the date in the naming convention for all archives.    
-        
+    - Your department uses the [ISO 8601](https://www.cl.cam.ac.uk/~mgk25/iso-time.html) standard for representing the date in the naming convention for all archives.
+  
         - Using the standard for representing the date, YYYY-MM-DD, allows sysadmins to locate an archive quickly.
 
         - Use the date **May 5, 2019** and convert it to the ISO 8601 format *without dashes*.
@@ -68,11 +68,11 @@ You have been tasked with:
 
 ### Part 2: Restoring Backups with `tar`
 
-The E-Prescription Treatment database was attacked and the database was taken offline. 
+The E-Prescription Treatment database was attacked and the database was taken offline.
 
 - Fortunately, the team had a recent full backup and was able to recover the database, making the system operational. However, a pharmacy technician noticed that some files in the Patient database were missing, and the team discovered that the wrong full backup was used. The system was taken offline again.
 
-- It is critical that the missing patient files are restored as soon as possible. You have spoken to the pharmacy technician and received a list of the names of patients whose files are missing.  
+- It is critical that the missing patient files are restored as soon as possible. You have spoken to the pharmacy technician and received a list of the names of patients whose files are missing.
 
 You have been tasked to:
 
@@ -80,12 +80,12 @@ You have been tasked to:
 
 - Create a directory to restore the patient data for review.
 
-- Extract only the patient files to the directory so they can be checked by the pharmacy technician. 
+- Extract only the patient files to the directory so they can be checked by the pharmacy technician.
 
 - Validate that the archive does not contain errors, using a new `tar` option.
 
 
-### Instructions 
+### Instructions
 
 1. Move to the `~/Documents/epscript/backup` directory.
 
@@ -111,4 +111,4 @@ You have been tasked to:
 
 ---
 
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
+© 2020 Trilogy Education Services, a 2U, Inc. brand.  All Rights Reserved.

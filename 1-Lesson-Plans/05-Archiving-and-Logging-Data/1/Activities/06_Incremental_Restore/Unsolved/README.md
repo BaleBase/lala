@@ -12,7 +12,7 @@ You will use the following process to test the new restoration procedure:
 
 - List and verify the existing files in the `testenvir` directory.
 - Create a **level 0** backup on Sunday containing the entire `testenvir` directory.
-- Simulate a cyber attack by deleting the `patient` directory from the `testenvir` parent folder.
+- Simulate a cyber attack by deleting the `patient` directory from the `testenvir` parent directory.
 - Verify the `patient` directory is missing.
 - Restore the missing `patient` directory from the incremental backup.
 - List and verify the `patient` directory to verify the restoration was successful.
@@ -34,7 +34,7 @@ If you are not already logged on, log into the lab environment using the followi
 
 2. In your `~/Documents/epscript` directory, create the level 0 backup of the `testenvir` directory, which contains the `doctor`, `patient`, and `treatment` directories.
 
-   - Change back into the `epscript` directory:
+   - Move back into the `epscript` directory:
 
       - Run `cd ../`
 
@@ -50,15 +50,15 @@ If you are not already logged on, log into the lab environment using the followi
 
 4.  Next, we'll simulate a natural disaster or cyber attack by removing the `patient` directory.
 
-     - From the `~/Documents/epscript` directory:
+    - From the `~/Documents/epscript` directory:
 
-       - Run `rm -r testenvir/patient/`
+      - Run `rm -r testenvir/patient/`
 
-    - Verify that the `patient` directory is removed.
+    - Verify that the `patient` directory is removed:
 
        - Run `ls -l testenvir/`
 
-   - Your output should look similar to the following. Notice that the `patient` directory is missing.
+    - Your output should look similar to the following. Notice that the `patient` directory is missing.
 
       ```
       total 8
@@ -72,7 +72,7 @@ If you are not already logged on, log into the lab environment using the followi
 
      - Run `cd ~/Documents/epscript`
 
-   - Restore the missing **patient** directory.
+   - Restore the missing **patient** directory:
 
    - Verify that the files have been added to the `testenvir/patient` directory successfully.
 
@@ -82,15 +82,15 @@ If you are not already logged on, log into the lab environment using the followi
 
 6. Before we create an incremental backup, we'll add new files. Let's add a couple of files to the  `patient` directory:
 
-    - First, ensure your in the `cd ~/Documents/epscript/testenvir/patient/` directory.
+    - First, ensure you're in the `cd ~/Documents/epscript/testenvir/patient/` directory.
 
       - Run `cd ~/Documents/epscript/testenvir/patient/`
 
-    - Create a few of arbitrary files:
+    - Create a couple of arbitrary files:
 
       - For example: `touch patient.0a.txt patient.0b.txt`
 
-    - Verify the 
+    - Verify that the files have been added:
 
       - Run `ls -l`
 
