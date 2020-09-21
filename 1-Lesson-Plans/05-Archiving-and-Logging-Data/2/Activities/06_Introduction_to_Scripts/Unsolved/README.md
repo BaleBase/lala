@@ -51,7 +51,7 @@ You have been tasked to:
 
     - **Bonus:** Add a line to the bottom of `update.sh` combining all of the commands with a single line of code.
 
-4. Make all scripts executable.
+4. Make each of these custom scripts executable.
 
 5. Test the scripts by running them with bash using the `sudo ./<name of the script>.sh` command.
 
@@ -66,6 +66,8 @@ You have been tasked to:
     - Clears the `apt` cache.
 
     - Cleans the `thumbnails` cache.
+
+    - Make each of these custom script executable.
 
 
 ---

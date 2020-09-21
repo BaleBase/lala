@@ -26,22 +26,21 @@
 
 2. Answer the following `script` assessment questions:
 
-    - What is a shebang?
+    - What is a _shebang_?
 
-    - What two characters should come before the filename of a script?
+    - What two characters should come before the filename of a script that is executable by the user, is in the current directory and that is not in $PATH?
 
-    - Jane's script has user and group ownership of a script with `-rw-r--r--` permissions, but she cannot get it to run. What must she do to the file before it will run?
-
+    - Jane's script has _user_ and _group_ ownership of a script with `-rw-r--r--` permissions, but gets a permission denied error when she tries to run it. What is one thing she needs to do to the file before it will run?
 
 3. Answer the following `tar` assessment questions:
 
     - How does the `-x` option modify the `tar` command?
 
-    - If a directory has `ten` files and the following command is used in it, how many files are being archived?
+    - If a directory has `ten` files and two subdirectories with one file in each and the following command is used in it, how many files are being archived?
 
       -  `tar cvvWf backups/archive.tar .`
 
-    - What option prints the full file specification of files as you interact with them?
+    - What option prints the full file specification of files as they are archived?
 
     - Why is the `-f` option used in almost every `tar` operation?
 

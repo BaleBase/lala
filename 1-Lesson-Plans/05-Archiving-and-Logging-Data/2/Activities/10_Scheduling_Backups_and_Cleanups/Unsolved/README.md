@@ -31,6 +31,8 @@ In this exercise, you remain in your role as a junior administrator at Rezifp Ph
  - **A**.  Move the following scripts you wrote in the previous exercise to the appropriate `cron` directories in `/etc`. Specifically, your scripts should run at the following intervals:
 
     - `cleanup.sh` should run daily.
+    - `lynis.system.sh` should run weekly.
+    - `lynis.partial.sh` should run daily.
 
  - **B**. Explain why using scripts to run these commands is preferable to using a `crontab`.
 

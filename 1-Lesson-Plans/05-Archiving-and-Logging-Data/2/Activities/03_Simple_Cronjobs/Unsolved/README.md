@@ -38,7 +38,7 @@ You have been tasked to:
         - `/usr/share/patients`
         - `/usr/share/treatments`
  
-    - **Bonus:** Create all three directories with a single command. (_Hint: Use brace expansion._)
+   **Bonus**: Create all three directories with a single command. _(Hint: Use brace expansion.)_  https://www.google.com/search?q=bash+brace+expansion
 
 5. Open your crontab for editing, and schedule the following jobs to run at the specified time intervals:
   - Every day at 6 p.m., move all `doctors*.docx` files in `~/Downloads` to `/usr/share/doctors`.
@@ -47,21 +47,24 @@ You have been tasked to:
 
     Close and save your crontab files before moving on.
 
-7. Double-check that your crontab has been created in `/var/spool/cron`. Remember the path to your crontab file once you find it.
+6. Double-check that your crontab has been created in `/var/spool/cron`. Remember the path to your crontab file once you find it.
+
+    - Run  `sudo ls -l /var/spool/cron/crontabs | grep sysadmin`
 
 #### Bonus
 
-Create the following cron jobs:
+Create the following additional cron jobs.
 
-  - Every Friday at 11 p.m., create a compressed tarball of all files in `~/research` in `~/Documents/MedicalArchive`. Name the archive `Medical_backup.tar.gz`.
+- Every Friday at 11 p.m., create a compressed tarball of all files in `~/research` in `~/Documents/MedicalArchive`. Name the archive `Medical_backup.tar.gz`.
 
-  - Every Friday at 11:05 p.m., verify the validity of the archive `Medical_backup.tar.gz`.
-  
+- Every Friday at 11:05 p.m., verify the validity of the archive `Medical_backup.tar.gz`.
+
   - Every day at 4 a.m., create a list of all files in `~/Downloads`. Save it to `~/Documents/Medical_files_list.txt`.
 
     Close and save your crontab files before moving on.
 
-- Double-check that your crontab has been created in `/var/spool/cron`. Remember the path to your crontab file once you find it.
+- After scheduling your jobs, double-check that your crontab has been created in `/var/spool/cron`. Remember the path to your crontab file once you find it.
+
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  
