@@ -26,13 +26,13 @@ You have been tasked to:
 
 2. Create a script file called `backup.sh` that does the following:
 
-    - Creates a tar archive of `/home`. Save this to `/var/backup/home.tar`.
+    - Creates a tar archive of `/home`. Save this to `/var/backups/home.tar`.
     
-    - Moves the file `/var/backup/home.tar` to `/var/backup/home.MMDDYYYY.tar`. This allows you to save both the last backup you made, and the one you'll make now. **Note:** You can use any date you want, as long as it is in the `MMDDYYYY` format. 
+    - Moves the file `/var/backups/home.tar` to `/var/backups/home.MMDDYYYY.tar`. This allows you to save both the last backup you made, and the one you'll make now. **Note:** You can use any date you want, as long as it is in the `MMDDYYYY` format. 
 
-    - Lists all files in `/var/backup`, including file sizes, and saves the output to `/var/backup/file_report.txt`. `ls -lh` or `ls -lah`  is useful for this task.
+    - Lists all files in `/var/backups`, including file sizes, and saves the output to `/var/backups/file_report.txt`. `ls -lh` or `ls -lah`  is useful for this task.
 
-    - Prints how much memory your machine has free. Save this to a file called `/var/backup/disk_report.txt`. `free -h` is useful for this task.
+    - Prints how much memory your machine has free. Save this to a file called `/var/backups/disk_report.txt`. `free -h` is useful for this task.
 
      **Hint**: 
 
