@@ -11,7 +11,7 @@ You will create a log rotation scheme that keeps four weeks' worth of logs with 
 
 In your Ubuntu VM, launch a terminal. 
 
-1. Check your logrotate version for documentation purposes.
+1. Verify you have the most up-to-date version of logrotate installed. 
 
 2. Configure the following default parameters for logrotate by editing `/etc/logrotate.conf`: 
 
@@ -23,7 +23,7 @@ In your Ubuntu VM, launch a terminal.
 
    - Compress log files.
 
-4. List the contents of `logrotate.d` to see what configuration files are present.
+3. List the contents of `logrotate.d` to see what configuration files are present.
 
 4. In `/etc/logrotate.d`, add configurations for the following directories:
 

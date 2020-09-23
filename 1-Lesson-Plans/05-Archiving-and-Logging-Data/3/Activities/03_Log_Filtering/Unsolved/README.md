@@ -16,7 +16,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
 
 ### Instructions
   
-1. Ensure that logs aare saved across reboots by checking if `journalctl` is running in persistent mode. 
+1. Ensure that logs are saved across reboots by checking if `journalctl` is running in persistent mode. 
 
    - Checking the `/etc/systemd/journald.conf` for `Storage`:
  
@@ -61,7 +61,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
       - Log persistence is now enabled.
  
 2. Now we'll assume the role of an attacker who breached a user's account with admin privileges and is now trying to create a fake account to establish login persistence.
- 
+
     - For this part of the activity, you will need to open two terminals side by side.
  
       - **Terminal #1** will be your real-time journal messages window.
@@ -73,7 +73,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
    **Terminal #2**
  
-    - Create a fake user account.
+     - Create a fake user account:
  
       - Run: `sudo adduser hacker`
       - Password is `hack`
@@ -81,7 +81,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
     - Thinking like a criminal hacker, let's perform privileges escalation by adding this newly created user to the **sudoers** file. This will provide the hacker account with admin privileges.
  
-      - Type: `sudo usermod -aG sudo hacker`
+      - Run: `sudo usermod -aG sudo hacker`
  
    **Terminal #1**
  
@@ -102,20 +102,20 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
      Jul 15 17:59:33 cyber-security-ubuntu sudo[12974]: pam_unix(sudo:session): session closed for user root
      Jul 15 18:00:01 cyber-security-ubuntu CRON[12996]: pam_unix(cron:session): session opened for user smmsp by (uid=0)
      Jul 15 18:00:01 cyber-security-ubuntu CRON[12997]: (smmsp) CMD (test -x /etc/init.d/sendmail && test -x /usr/share/sendmail/sendmail && test -x /usr/lib/sm.bin/sendmail && /usr/share/sendmail/sendmail cron-msp)
- 
+
      Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: instructor : TTY=pts/1 ; PWD=/home/instructor ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo criminalhacker
      Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: pam_unix(sudo:session): session opened for user root by (uid=0)
      Jul 15 18:00:25 cyber-security-ubuntu usermod[13021]: add 'criminalhacker' to group 'sudo'
      Jul 15 18:00:25 cyber-security-ubuntu usermod[13021]: add 'criminalhacker' to shadow group 'sudo'
      Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: pam_unix(sudo:session): session closed for user root
      ```
- 
+
  - Answer the following questions. What does the journal message reveal about this malicious activity?
  
    - Was the hacker able to successfully create a fake user account?
  
    - What user account was breached in this scenario?
- 
+
    - What is the `UID` and `GUID` of the fake account?
   
    - Was the criminal hacker able to successfully create a sendmail account?
@@ -124,7 +124,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
   
    - Was the attacker able to successfully establish persistence?
  
-#### Bonus: Ghost in the Machine
+#### Bonus: `Ghost in the Machine`
  
 3. Criminal hackers operate under an umbrella of stealth and perform malicious activities under other identities. For the bonus, you have been tasked with identifying the source of malicious activity using `journalctl`.
  
@@ -152,7 +152,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
        - Run: `journalctl _UID=1013`
  
-    - What did the `journalctl -ef` output display the malicious activity performed by the attacker and `journalctl _UID=1013` did not?
+     - What did the `journalctl -ef` output display when the malicious activity was performed that the `journalctl _UID=1013` did not?
  
  
 ---
