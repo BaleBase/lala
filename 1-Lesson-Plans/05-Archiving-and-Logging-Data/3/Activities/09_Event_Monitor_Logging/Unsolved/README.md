@@ -38,7 +38,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
 
     - Verify the new rule by listing `auditcl` rules.
 
-9. Perform a search in the authentication report for user authentication attempts.
+9. Perform a search to look for failed user authentications.
 
     -  Make sure to disable your current `sudo` access with `sudo -k`. This option revokes your current `sudo` session, requiring you to have to enter your password on your next `sudo` command.
 

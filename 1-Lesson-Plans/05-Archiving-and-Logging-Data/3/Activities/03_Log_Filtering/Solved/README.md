@@ -1,4 +1,4 @@
-## Student Activity: Log Filtering
+## Solution File: Log Filtering
  
 In this activity, you are a junior administrator at Rezifp Pharma Inc. The company maintains a large database of files associated with patients, doctors, and treatments. These files are maintained on a local server.
  
@@ -14,8 +14,10 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
 
 - You may need to use the `sudo` command.
 
-### Instructions
-  
+The goal of this activity was to use `journalctl` to filter log files. Massive amounts of information exist within Linux logs, and the challenge is in knowing how to extract it.
+ 
+### Solution
+
 1. Ensure that logs are saved across reboots by checking if `journalctl` is running in persistent mode. 
 
    - Checking the `/etc/systemd/journald.conf` for `Storage`:
@@ -114,14 +116,24 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
    - Was the hacker able to successfully create a fake user account?
  
+   - The attacker has successfully created a fake user account called **hacker**
+
    - What user account was breached in this scenario?
+ 
+   - The breached user account that was used to create the fake account was **sysadmin**.
 
    - What is the `UID` and `GUID` of the fake account?
+
+   - The newly created fake account has a `UID=1013` and `GUID=1017`.  Your system's actual UID and GUID may vary.
   
    - Was the criminal hacker able to successfully create a sendmail account?
  
+   - The criminal hacker was able to successfully create a sendmail account.
+ 
    - Did the criminal hacker provide admin privileges to the fake user's account?
   
+   - The criminal hacker has also successfully added the fake account to the **sudoers** files, providing them with admin privileges.
+ 
 #### Bonus: `Ghost in the Machine`
  
 3. Criminal hackers operate under an umbrella of stealth and perform malicious activities under other identities. For the bonus, you have been tasked with identifying the source of malicious activity using `journalctl`.
@@ -154,6 +166,19 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
      - What did the `journalctl -ef` output display when the malicious activity was performed that the `journalctl _UID=1013` did not?
  
+       - **Answer**: The attacker used the `sudo` command to perform activity under the root account, which has a user ID of `0` therefore all activity will show under ID `0` instead of ID `1013`.
+  
+     - In the screenshot excerpt, we can see that the `journalctl -ef` window proves this theory.
+ 
+        ```
+        Jul 15 18:53:07 cyber-security-ubuntu sudo[14149]: pam_unix(sudo:session): session opened for user root by (uid=0)
+        Jul 15 18:53:07 cyber-security-ubuntu groupadd[14151]: group added to /etc/group: name=badguy, GID=1015
+        Jul 15 18:53:07 cyber-security-ubuntu groupadd[14151]: group added to /etc/gshadow: name=badguy
+        ```
+        -  **Note**: `session opened for user root by (uid=0)`
+ 
+   This highlights the benefit of using `journalctl -ef` over `journalctl _UID=1013`.
  
 ---
+ 
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved. 
