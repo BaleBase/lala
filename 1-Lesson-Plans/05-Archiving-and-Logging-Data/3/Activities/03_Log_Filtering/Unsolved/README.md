@@ -90,23 +90,23 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
     - Your output should look similar to the following:
  
      ```
-     Jul 15 17:59:18 cyber-security-ubuntu sudo[12974]: instructor : TTY=pts/1 ; PWD=/home/instructor ; USER=root ; COMMAND=/usr/sbin/adduser criminalhacker
+     Jul 15 17:59:18 cyber-security-ubuntu sudo[12974]: sysadmin : TTY=pts/1 ; PWD=/home/sysadmin ; USER=root ; COMMAND=/usr/sbin/adduser hacker
      Jul 15 17:59:18 cyber-security-ubuntu sudo[12974]: pam_unix(sudo:session): session opened for user root by (uid=0)
-     Jul 15 17:59:18 cyber-security-ubuntu groupadd[12976]: group added to /etc/group: name=criminalhacker, GID=1017
-     Jul 15 17:59:18 cyber-security-ubuntu groupadd[12976]: group added to /etc/gshadow: name=criminalhacker
-     Jul 15 17:59:18 cyber-security-ubuntu groupadd[12976]: new group: name=criminalhacker, GID=1017
-     Jul 15 17:59:18 cyber-security-ubuntu useradd[12980]: new user: name=criminalhacker, UID=1013, GID=1017, home=/home/criminalhacker, shell=/bin/bash
-     Jul 15 17:59:31 cyber-security-ubuntu passwd[12988]: pam_unix(passwd:chauthtok): password changed for criminalhacker
+     Jul 15 17:59:18 cyber-security-ubuntu groupadd[12976]: group added to /etc/group: name=hacker, GID=1017
+     Jul 15 17:59:18 cyber-security-ubuntu groupadd[12976]: group added to /etc/gshadow: name=hacker
+     Jul 15 17:59:18 cyber-security-ubuntu groupadd[12976]: new group: name=hacker, GID=1017
+     Jul 15 17:59:18 cyber-security-ubuntu useradd[12980]: new user: name=hacker, UID=1013, GID=1017, home=/home/hacker, shell=/bin/bash
+     Jul 15 17:59:31 cyber-security-ubuntu passwd[12988]: pam_unix(passwd:chauthtok): password changed for hacker
      Jul 15 17:59:31 cyber-security-ubuntu passwd[12988]: gkr-pam: couldn't update the login keyring password: no old password was entered
-     Jul 15 17:59:33 cyber-security-ubuntu chfn[12989]: changed user 'criminalhacker' information
+     Jul 15 17:59:33 cyber-security-ubuntu chfn[12989]: changed user 'hacker' information
      Jul 15 17:59:33 cyber-security-ubuntu sudo[12974]: pam_unix(sudo:session): session closed for user root
      Jul 15 18:00:01 cyber-security-ubuntu CRON[12996]: pam_unix(cron:session): session opened for user smmsp by (uid=0)
      Jul 15 18:00:01 cyber-security-ubuntu CRON[12997]: (smmsp) CMD (test -x /etc/init.d/sendmail && test -x /usr/share/sendmail/sendmail && test -x /usr/lib/sm.bin/sendmail && /usr/share/sendmail/sendmail cron-msp)
 
-     Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: instructor : TTY=pts/1 ; PWD=/home/instructor ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo criminalhacker
+     Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: sysadmin : TTY=pts/1 ; PWD=/home/sysadmin ; USER=root ; COMMAND=/usr/sbin/usermod -aG sudo hacker
      Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: pam_unix(sudo:session): session opened for user root by (uid=0)
-     Jul 15 18:00:25 cyber-security-ubuntu usermod[13021]: add 'criminalhacker' to group 'sudo'
-     Jul 15 18:00:25 cyber-security-ubuntu usermod[13021]: add 'criminalhacker' to shadow group 'sudo'
+     Jul 15 18:00:25 cyber-security-ubuntu usermod[13021]: add 'hacker' to group 'sudo'
+     Jul 15 18:00:25 cyber-security-ubuntu usermod[13021]: add 'hacker' to shadow group 'sudo'
      Jul 15 18:00:25 cyber-security-ubuntu sudo[13020]: pam_unix(sudo:session): session closed for user root
      ```
 
@@ -122,8 +122,6 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
    - Did the criminal hacker provide admin privileges to the fake user's account?
   
-   - Was the attacker able to successfully establish persistence?
- 
 #### Bonus: `Ghost in the Machine`
  
 3. Criminal hackers operate under an umbrella of stealth and perform malicious activities under other identities. For the bonus, you have been tasked with identifying the source of malicious activity using `journalctl`.
@@ -133,7 +131,9 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
      - Run `journalctl -ef`.
  
    **Terminal #2**
- 
+
+     - Switch user to hacker
+
      - Create a new user account as follows:
  
        - `sudo adduser badguy`
@@ -144,7 +144,7 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
  
      - Now let's use journalctl to check activity under the criminal hacker's user ID.
  
-       - Logged in as criminal hacker, check your UID:
+       - Logged in as hacker, check your UID:
  
        - Run: `id`
  
