@@ -69,7 +69,7 @@ The original script has many of the commands we need in it already.  Those comma
 
 - `echo -e "\n777 Files:" >> ~/research/sys_info.txt`
 
-- `find / -type f -perm 777 >> ~/research/sys_info.txt`
+- `find / -type f -perm 777 2> /dev/null >> ~/research/sys_info.txt`
 
 These next two commands are exactly the same as they were in first two exercises. The only thing we are adding is an `echo` command that will give each command's output a heading.
 
@@ -97,7 +97,7 @@ echo -e "Uname info: $(uname -a) \n" >> ~/research/sys_info.txt
 echo -e "IP Info: $(ip addr | grep inet | tail -2 | head -1) \n" >> ~/research/sys_info.txt
 echo "Hostname: $(hostname -s) " >> ~/research/sys_info.txt
 echo -e "\n777 Files:" >>  ~/research/sys_info.txt
-find / -type f -perm 777 >> ~/research/sys_info.txt
+find / -type f -perm 777 2> /dev/null >> ~/research/sys_info.txt
 echo -e "\nTop 10 Processes" >> ~/research/sys_info.txt
 ps aux -m | awk {'print $1, $2, $3, $4, $11'} | head >> ~/research/sys_info.txt
 

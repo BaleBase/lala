@@ -101,7 +101,7 @@ Create aliases for the following:
 
 - `nano ~/.bashrc`
 - `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
-- `sudo find /home -type f -perm 777 > ~/research/exec_lst.txt`
+- `find / -type f -perm 777 2> /dev/null > ~/research/exec_lst.txt`
 - `ps aux -m | awk {'print $1, $2, $3, $4, $11'} | head > ~/research/top_processes.txt`
 - `ls home > ~/research/users.txt && cat /etc/passwd | awk -F ":" '{if ($3 >= 1000) print $0}' >> ~/research/users.txt`
 
@@ -149,9 +149,9 @@ Complete the same steps for the following:
 
     - **Solution**: `echo "alias logs='mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research'" >> ~/.bashrc`
 
-2. `sudo find /home -type f -perm 777 > ~/research/exec_lst.txt`
+2. `find / -type f -perm 777 2> /dev/null > ~/research/exec_lst.txt`
 
-    - **Solution**: `echo "alias exec='sudo find /home -type f -perm 777 > ~/research/exec_lst.txt'" >> ~/.bashrc`
+    - **Solution**: `echo "alias exec='find / -type f -perm 777 2> /dev/null > ~/research/exec_lst.txt'" >> ~/.bashrc`
 
 3. `ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head > ~/research/top_processes.txt`
 
@@ -172,7 +172,7 @@ alias dwn='cd ~/Downloads'
 alias etc='cd /etc'
 alias rc='nano ~/.bashrc'
 alias logs='mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research'
-alias exec='sudo find /home -type f -perm 777'
+alias exec='find / -type f -perm 777 2> /dev/null'
 alias aux='ps aux -m | awk {"print $1, $2, $3, $4, $11"} | head'
 alias users='ls home > ~/research/users.txt && cat /etc/passwd | awk -F ":" '{if ($3 >= 1000) print $0}''
 ```

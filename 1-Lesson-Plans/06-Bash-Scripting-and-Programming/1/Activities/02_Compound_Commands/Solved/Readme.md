@@ -25,11 +25,11 @@ Completing this activity required the following steps:
 
 - Creating a directory and automatically copying log files to it with one command.
 
-- Finding a list of executable files in the home folder and saving it to a text file inside your directory with one command.
+- Finding a list of executable files in the file system and saving it to a text file inside your directory with one command.
 
 - Saving an edited list of the 10 most active processes to your directory with one command.
 
-- Creating a list of home folders and users with a UID less than 1000 and saving it to your directory, all with one command.
+- Creating a list of home directories and users with a UID less than 1000 and saving it to your directory, all with one command.
 
 ---
 
@@ -64,20 +64,21 @@ Remember the command we discussed at the beginning of class: `file $(find / -ina
 
 - This command is an example in which `&&` might be better to use than `;` before we issue the `tail` command. This way, the file is completely written before we open it.
 
-2. Create a list of all executable files in the home folder and save it to a text file in the research folder with one long command.  Hint:  the `find` command and some extra options may be useful here.
+2. Create a list of all executable files in the root directory and save it to a text file in the research directory with one long command.  Hint:  the `find` command and some extra options may be useful here.  Do not use the root user, just discard any error messages.
 
-- Run `sudo find /home -type f -perm 777 > ~/research/exec_lst.txt`
+- Run `find / -type f -perm 777 2> /dev/null > ~/research/exec_lst.txt`
 
- This task only requires using one command, along with an output redirect to direct the list into a file that we specify. Again, we need to use `sudo` to search the entire system.
+ This task only requires using one command, along with an output redirect to direct the list into a file that we specify and sending the errors to the "bit bucket" /dev/null. 
 
-- Run `sudo find /home -type f -perm 777 > ~/research/exec_lst.txt`
+- Run `find / -type f -perm 777 2> /dev/null > ~/research/exec_lst.txt`
 
    Syntax breakdown:
 
-   - `sudo find` searches the entire directory.
+   - `find` searches the entire file system.
    - `/` starts our search in the `root` directory.
    - `-type f` searches for objects that are files (not directories).
    - `-perm 777` searches for objects that have the `4000` bit set, or the `exec` bit.
+   - `2> /dev/null` sends any error messages to the "bit bucket."
    - ` > ~/research/exec_lst.txt` redirects the list returned by `find` to a text file.
 
 Navigate to `/home/sysadmin/research`.
@@ -111,7 +112,7 @@ Add the `head` and output parts of the command:
 
 #### Bonus
 
-- Create a list of home folders along with user info from the `passwd` file. Only add the user info to your list if the `UID` is greater than 1000.  Hint:  Check out doing an `if` in `awk`.
+- Create a list of home directories along with user info from the `passwd` file. Only add the user info to your list if the `UID` is greater than 1000.  Hint:  Check out doing an `if` in `awk`.
 
    - Run: `ls /home > ~/research/users.txt && cat /etc/passwd | awk -F ":" '{if ($3 >= 1000) print $0}' >> ~/research/users.txt`
 
@@ -120,7 +121,7 @@ Add the `head` and output parts of the command:
 
 - Type the first part of the command: `ls /home > ~/research/users.txt &&`
 
-   - This command creates a list of the home folders and saves it. Then, we are using the `&&` to make sure that this command completes before we add more to that file.
+   - This command creates a list of the home directories and saves it. Then, we are using the `&&` to make sure that this command completes before we add more to that file.
 
 Type out the next part of the command: `cat /etc/passwd | awk -F ":" '{if ($3 >= 1000) print $0}'`
 

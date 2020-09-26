@@ -28,7 +28,7 @@ Create aliases for the following:
 
 - `nano ~/.bashrc`
 - `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
-- `sudo find / -type f -perm 777 > ~/research/exec_lst.txt`
+- `find / -type f -perm 777 2> /dev/null > ~/research/exec_lst.txt`
 - `ps aux -m | awk {'print $1, $2, $3, $4, $11'} | head > ~/research/top_processes.txt`
 - `ls home > ~/research/users.txt && cat /etc/passwd | awk -F ":" '{if ($3 >= 1000) print $0}' >> ~/research/users.txt`
 
