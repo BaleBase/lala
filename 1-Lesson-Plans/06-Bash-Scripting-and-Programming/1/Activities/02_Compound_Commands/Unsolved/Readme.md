@@ -26,13 +26,13 @@ Log into the lab environment with the username `sysadmin` and password `cybersec
 
 1. Create a research directory in the home directory and copy all system logs along with the `shadow`, `passwd`, and `hosts` files in one long command.
 
-2. Create a list of all executable files in the home folder and save it to a text file in the research folder with one long command.  Hint:  the `find` command and some extra options may be useful here.
+2. Create a list of all executable files in the root directory and save it to a text file in the research directory with one long command.  Hint:  the `find` command and some extra options may be useful here.  Do not use the root user, just discard any error messages.
 
 3. Create a list of the 10 most active processes. The list should only contain the `USER`, `PID`, `%CPU`, `%MEM` and `COMMAND`. Save this list to a text file in your research directory with one long command.  Hint:  `ps` and `awk` and some options may be helpful here.
 
 #### Bonus
 
-- Create a list of home folders along with user info from the `passwd` file. Only add the user info to your list if the `UID` is greater than 1000.  Hint:  Check out doing an `if` in `awk`.
+- Create a list of home directories along with user info from the `passwd` file. Only add the user info to your list if the `UID` is greater than 1000.  Hint:  Check out doing an `if` in `awk`.
 
 
 ---
