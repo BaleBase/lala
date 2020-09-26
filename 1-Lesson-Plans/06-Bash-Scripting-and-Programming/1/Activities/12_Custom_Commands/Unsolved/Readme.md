@@ -10,9 +10,11 @@ Completing this activity will require the following:
 
 - Ensure your script from the last activity runs as expected.
 
-- Add the new commands listed in the instructions to your script.
+- Copy the script to a new file called mk_sys_info.sh.
 
-- Save your script in a `~/scripts` directory.
+- Add the new commands listed or modify existing commands in the instructions to your script.
+
+- Move your script to a `~/scripts` directory as `sys_info.sh`.
 
 - Add your `~/scripts` directory to your `$PATH`.
 
@@ -22,13 +24,18 @@ Completing this activity will require the following:
 
 Complete the following inside your script.
 
-- Add the command for creating a `~/research` directory to your script.
+- Add the command for creating a `~/research` directory.
+
+- Add the command to start a new file called sys_info.txt with the title "A Quick System Audit Script" in ~/research/sys_info.txt.  The output of each following command should be added as a new separate line to this file.
+
+- Output the current date and time.  Following it should be a blank line.
+
+- Modify each command of the script so that it writes all output to a file called `~/research/sys_info.txt`.
+
 
 - Add the command for finding `777` files to your script.
 
-- Add the command for finding the Top 10 processes to your script.
-
-- Modify each command of the script so that it writes all output to a file called `~/research/sys_info.txt`.
+- Add a header line "Top 10 Processes."  On the next line, add the command for finding the Top 10 processes to your script.
 
 #### Bonus
 

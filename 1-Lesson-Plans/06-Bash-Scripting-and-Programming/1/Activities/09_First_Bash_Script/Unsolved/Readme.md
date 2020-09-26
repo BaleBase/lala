@@ -30,6 +30,20 @@ As a reminder, here are a few helpful environment and shell variables:
 
 ### Instructions
 
+Your script should output the following data:
+
+- A title and today's date.
+
+- The machine type.  Hint:  Look up the $MACHTYPE variable.
+
+- The `uname` info for the machine.  Hint:  `man uname`.
+
+- The machine's IP address. (Narrow this output down to one line.)  Hint:  `man ip`.
+
+- The Hostname.  Hint:  `man hostname`.
+
+Run your script using `./` notation.
+
 Complete the following set-up:
 
 - Create a new script file called `sys_info.sh`.
@@ -39,18 +53,6 @@ Complete the following set-up:
 - Open the file with `nano`.
 
 - Add a top `hashbang` line to make this a bash script.
-
-Your script should output the following data:
-
-- A title and today's date.
-
-- The `uname` info for the machine.
-
-- The machine's IP address. (Narrow this output down to one line.)
-
-- The Hostname.
-
-Run your script using `./` notation.
 
 #### Bonus Script Ideas
 

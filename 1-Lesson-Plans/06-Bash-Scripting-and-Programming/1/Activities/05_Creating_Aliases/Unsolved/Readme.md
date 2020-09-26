@@ -14,6 +14,8 @@ In the previous activity, you created longer commands by combining commands toge
 
 ### Instructions
 
+Log into the lab environment with the username `sysadmin` and password `cybersecurity`.
+
 Create aliases in your `~/.bashrc` file for the following commands:
 - `ls -a`
 - `cd ~/Documents`
@@ -21,6 +23,9 @@ Create aliases in your `~/.bashrc` file for the following commands:
 - `cd /etc`
 
 #### Bonus Aliases
+
+Create aliases for the following: 
+
 - `nano ~/.bashrc`
 - `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 - `sudo find /home -type f -perm 777 > ~/research/exec_lst.txt`
