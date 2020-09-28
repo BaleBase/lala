@@ -30,14 +30,19 @@ Consult this list of bash conditional operators while completing the activity:
 
 - `||` : One condition has to be true to run.
 
+Get started by logging into the lab environment with the username `sysadmin` and password `cybersecurity`.
 
-#### Using Variables
+- Open the `sys_info.sh` script from the previous class using `nano`.
+
+- Run `nano sys_info.sh`
+
+### Using Variables
 
 1. Create a variable to hold the path of your output file.
 
     - Replace the output file path for each command with your variable.
 
-#### Using If Statements
+### Using If Statements
 
 1. Create an `if` statement that checks for the existence of the `~/research` directory.
 
@@ -66,5 +71,10 @@ If you have already completed the exercises above, see if you can complete the f
 
 1. Protect the script from root! Create an `if` statement that checks if the script was run using `sudo`.
 
-    - If it was run with `sudo`, exit the script with a message that tells the user not to run the script using `sudo`.
+- If it was run with `sudo`, do nothing.
+- If it was run with sudo, exit the script with a message that tells the user not to run the script using `sudo`.
+
+---
+
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.    
 

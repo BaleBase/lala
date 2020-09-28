@@ -10,6 +10,8 @@ This adds another layer of sophistication and efficiency to your script.
 
 To complete this activity, you will create several `for` loops that satisfy given requirements. If you get to the bonus, you can incorporate a `for` loop into your script.
 
+### Instructions
+
 ### Create your script file.
 
 1. Create a new file named `for_loops.sh` and open it in your text editor.
@@ -25,10 +27,13 @@ Create a variable that holds a list of 5 of your favorite U.S. states (e.g. Nebr
 Create a `for` loop that checks for the state 'Hawaii' in your list of states. If the 'Hawaii' is there, print "Hawaii is the best!". If is not there, print "I'm not fond of Hawaii".
 
 ### Bonuses
-1. Create a variable that holds a list of numbers from `0-9`. Then, create a `for` loop that prints out only the numbers 3, 5 and 7 from your list of numbers.
+1. Create a variable that holds a list of numbers from `0-9`
 
-2. Create another variable that holds the output of the command `ls`. Then, create a `for` loop that prints out each item of this variable.
+    Then create a `for` loop that prints out only the numbers 3, 5 and 7 from your list of numbers.
 
+2. Create another variable that holds the output of the command `ls`
+
+    Then create a `for` loop that prints out each item in your variable that holds the output of the `ls` command.
 
 ### Super Bonus
 
@@ -44,3 +49,8 @@ Exec Files:
 #### Challenge
 
 Instead of using `echo` to print out this variable, use a `for` loop to print out each file on it's own line.
+
+---
+
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.    
+
