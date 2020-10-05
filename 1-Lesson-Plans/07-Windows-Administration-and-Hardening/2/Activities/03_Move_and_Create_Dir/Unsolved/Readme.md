@@ -4,15 +4,15 @@ In this activity, you will work as a junior sysadmin tasked with vetting a proce
 
 - These logs will later be integrated into a log management program known as a SIEM. 
 
-- Use your Windows RDP Host machine for this activity. 
+**Use the Azure Windows Host for this activity.**
 
 ### Instructions
 
 1. Since we will eventually decommission the `Alex` user, move the `contracts` folder from Alex's desktop directory to `C:\`.
 
-2. Create `Backups` and `Scripts` directories in `C:\`.
+2. Create `Logs` and `Scripts`, `Backups` directories in `C:\`.
 
-   - Also create the `C:\Logs` directory if you did not do so earlier.
+   - Create the `C:\Logs`, `C:\Scripts`, and `C:\Backups` directories.
 
 3. Check the contents of the `C:\` directory to make sure the `Logs`, `Backups`, and `Scripts` directories exist.
 
