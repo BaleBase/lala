@@ -6,12 +6,11 @@ In this activity, you will continue your role as a Windows system administrator 
 
 - You are tasked with creating a Group Policy Object for the `Sales` OU that will limit the options they have to Windows `Settings`. 
 
+Make sure that you have the **Windows Server machine** launched before going forward.
+
 Make sure you are using your nested **Windows Server machine** for this activity.
 
-If you followed along with the demo, you need to unlink the **No Control Panel** panel from the `Sales` OU as it may interfere with your activity.
-
 ### Instructions
-
 
 1. Create the GPO. Navigate to the `Group Policy Management` tool.
 
@@ -19,7 +18,20 @@ If you followed along with the demo, you need to unlink the **No Control Panel**
 
     - If you don't see the `Sales` OU, expand the folders under the `GOODCORP.NET` domain.
 
+    - With the `Server Manager` open, click on `Tools` at the top-right.
+
+    - Select the `Group Policy Management` tool.
+
 2. Name the GPO `Limit Settings`.
+
+    - In the `Group Policy Management` window, right-click `Group Policy Objects` under `GOODCORP.NET` and click `New`.
+
+    - In the `New GPO` window, type in `Limit Settings` for the `Name:`.
+
+    - Click `OK`.
+
+    - The `Limit Settings` will show up under `Group Policy Objects` now.
+
 
 3. Right-click the GPO to `Edit...` its policies.
 
@@ -27,11 +39,17 @@ If you followed along with the demo, you need to unlink the **No Control Panel**
 
     - Set the policy to `Enabled`. 
 
-    - Under `Settings Page Visibility:`, enter `showonly:about,themes`.
+    - Under `Settings Page Visibility:` enter `showonly:about;themes`.
 
     - Apply and accept these changes. 
 
+    - Close the `Group Policy Management Editor` window.
+
 4. After you have enabled the policy, link the GPO to the `Sales` OU.
+
+    - Right-click the `Sales` OU, select `Link an Existing GPO...`.
+
+    - In the `Select GPO` window, select the `Limit Settings` GPO we just made and click `OK`.
 
 5. Add the Sales group to the Remote Desktop Users group like shown earlier, if you haven't already.
 
@@ -49,24 +67,27 @@ If you followed along with the demo, you need to unlink the **No Control Panel**
 
     - Click `OK` again.
 
-6. Refresh these policy and group changes on the Windows 10 machine.
+6. Look at the default `Windows Settings` and update with the new GPO settings.
 
-    - Go back to the Windows 10 machine, open a `CMD` or `PowerShell` window and enter:
-
-        - `gpupdate`
-
-    - This will update the Windows 10 machine with your latest changes.
+    - Log into the **Windows 10 machine** as the local `sysadmin` account.
 
     - Take a quick moment to look at the default `Windows Settings`.
  
        - Click the `Start` menu. Then click the cogwheel icon to launch the `Settings` menu. 
 
-       - You don't have to do anything here, but notice the different settings your `sysadmin` account has access to. 
+       - You don't have to do anything here, but notice the different settings your `sysadmin` account has access to.
 
- 
+    - Open a PowerShell window and run `gpupdate` to pull the latest GPO updates.
+
+        - You should see messages:
+    ```
+    Updating policy...
+
+    Computer Policy update has completed successfully.
+    User Policy update has completed successfully.
+    ```
+
 7. Test the Group Policy changes as `Bob`. Verify that Bob's account has limited access to `Windows Settings` by doing the following:
-
-    - Log into the **Windows 10 machine** as the local `sysadmin` account and run `gpupdate` to pull the latest updates.
 
     - Toggle **Enhanced Session Mode** _OFF_ then log into the **Windows 10 machine** as `Bob` with password `Ilovesales!`.
 
@@ -90,3 +111,4 @@ By toggling the session mode, you can use `GoodCorp.net\Bob` to sign into Bob's 
 
 ---
  © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+

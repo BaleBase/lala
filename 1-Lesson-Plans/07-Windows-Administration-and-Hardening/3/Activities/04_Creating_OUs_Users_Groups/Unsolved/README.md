@@ -6,6 +6,12 @@ In this activity, you are tasked with setting up users, groups, and organization
 
 - You will need to set up two users, `Andrew` and `Bob`. Andrew is in the Development department, and Bob is in the Sales department.
 
+Make sure you're connected to the **Windows Server machine**.
+
+- With the `Server Manager` open, click on `Tools` at the top-right.
+
+- Select the `Active Directory Users and Computers` (`ADUC`) tool.
+
 ### Instructions
 
 Complete the following tasks using the Active Directory Users and Computers (ADUC) tool:
@@ -39,3 +45,5 @@ Complete the following tasks using the Active Directory Users and Computers (ADU
 --- 
 
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
