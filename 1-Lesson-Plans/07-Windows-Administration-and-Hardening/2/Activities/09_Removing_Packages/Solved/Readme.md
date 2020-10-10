@@ -1,60 +1,87 @@
-## Solution Guide: Removing Windows Bloat with PowerShell
+## Solution Guide: Move and Create Directories
 
-For this exercise, we used conditionals in a PowerShell script to uninstall various Windows packages that add bloat to the system and increase the attack surface of the system. 
+In this activity, you will work as a junior sysadmin tasked with vetting a process to create Windows Event logs. 
 
-#### Solution 
+- These logs will later be integrated into a log management program known as a SIEM. 
 
-1. Create a PowerShell script file called `removepackages.ps1` in the working directory.
+**Use the Azure Windows Host for this activity.**
 
+In this activity, you were tasked with setting up multiple directories for the Windows workstation.
 
-    - Run `cd C:\Users\azadmin\Documents\Activity\choco`
+### Instructions
 
-    - Create a `removepackages.ps1` file:
+1. Since we will eventually decommission the `Alex` user, move the `contracts` folder from Alex's desktop directory to `C:\`.
 
-        - Create a file in your preferred text editor and save it as `removepackages.ps1`.
+  - First, make sure we're working out of Alex's desktop directory:
 
-2. Import the CSV `chocoactivity.csv` by assigning the `$csv` variable to the `Import-Csv` cmdlet, with the appropriate parameters.
+    - Run `Set-Location C:\Users\Alex\Desktop` to change directory.
 
-    - We'll need a line for importing the CSV file:
+    - This is the same as `cd` in Linux.
 
-        - Type `Import-Csv -Path ./chocoactivity.csv`
+  - Next, move `contracts` to `C:\`:
 
-           
+    - Run `Move-Item contracts C:\` to move the `contracts` directory to the `C:\` directory.
 
-3. Create a `foreach` condition where a `$package` variable reads each line in the `$csv` variable.
+    - This is the same as `mv` in Linux.
 
+  - Verify `contracts` is no longer in Alex's home directory:
 
-    - Start a PowerShell `foreach` loop template:
+    - Run `Get-ChildItem C:\` to get a listing of the directories and files in `C:\`.
 
-        ```PowerShell
-        foreach () {
-
-        }
-        ```
-
-    - Construct the `foreach` condition within the parentheses.
-
-    - Enter `$package in $csv` in the parentheses.
-
-4. Within the code block, run the uninstall command with the appropriate variable and attribute.
+    - This is the same as `ls` in Linux.
 
 
-    - Enter `choco uninstall -y $package.name` in the code block.
+2. Create `Logs` and `Scripts`, `Backups` directories in `C:\`.
+
+   - Create the `C:\Logs`, `C:\Scripts`, and `C:\Backups` directories.
+
+  - Now, we want to work out of `C:\`.
+
+  - Run `Set-Location C:\`.
+
+  - Make the `Backups`, `Logs`, and `Scripts` directories:
+
+    - Type `New-Item -Path "C:\" -Name "Logs" -ItemType "Directory"`, but don't run it yet.
+
+    - When we use the `-ItemType "Directory"` parameters here, it changes the `New-Item` functionality from being like `touch` to `mkdir` in Linux.
+
+  - We can actually shorten this command a little and have it create all the directories:
+
+    - Edit the line to match the following:
+
+    - Run `New-Item "Logs", "Backups", "Scripts" -ItemType "Directory" -Force`
+
+    - This command will create all the directories in the current directory.
+
+    - This is similar to using _brace expansion_ with `mkdir`:  `mkdir {Logs, Backups, Scripts}`.
+
+    - The `-Force` parameter will ignore any errors if the directories already exist.
+
+3. Check the contents of the `C:\` directory to make sure the `Logs`, `Backups`, and `Scripts` directories exist.
 
 
-5. For the bonus, add the following line: `Write-Output $package.name removed!`.
+  - Run `Get-ChildItem` to show `contracts`, `Logs`, `Backups`, and `Scripts` in `C:\`. We now have the following directories:
 
-    - Your final script should look like this:
+    - `C:\Backups`
+    - `C:\Logs`
+    - `C:\contracts`
+    - `C:\Scripts`
 
-        ```PowerShell
-        $csv = Import-Csv -Path .\chocoactivity.csv
-        foreach ($package in $csv) {
-            choco uninstall -y $package.name
-            Write-Output $package.name removed!
-        }
-        ```
+**Bonus**
 
-When we successfully create and execute the script, PowerShell will start uninstalling the packages within the CSV file. This will take a few minutes to complete.
+4. Use `Rename-Item` to capitalize the `contracts` directory if it is not already.
+
+  - Use `Rename-Item` to capitalize the `contracts` directory. 
+
+    - `Rename-Item contracts Contracts` seems like the correct option (if you recall `mv` in bash), but the command actually errors out. 
+
+  - Instead, we use `Rename-Item` twice to change the directory name: 
+
+    - `Rename-Item contracts contracts1`
+
+    - `Rename-Item contracts1 Contracts`
 
 ---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+

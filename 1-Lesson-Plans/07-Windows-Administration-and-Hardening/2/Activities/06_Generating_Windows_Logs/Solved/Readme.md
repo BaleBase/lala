@@ -1,38 +1,87 @@
-## Solution Guide: Generating Windows Event Log Files with Parameters and Pipelines
+## Solution Guide: Move and Create Directories
 
-In this activity, you were responsible for retrieving recent security and application logs using PowerShell, transforming them to JSON, and then saving them to `C:\Logs`.
+In this activity, you will work as a junior sysadmin tasked with vetting a process to create Windows Event logs. 
 
-#### Solutions
+- These logs will later be integrated into a log management program known as a SIEM. 
 
-1. First we need to check the names of the logs we want to retrieve:
+**Use the Azure Windows Host for this activity.**
 
-   - Run `Get-WinEvent -listlog *` to show all log names.
+In this activity, you were tasked with setting up multiple directories for the Windows workstation.
 
-2. Check for and retrieve the names of the security and application logs:
+### Instructions
 
-    - Scroll to the top to show the `Security` and `Application` log names in the `LogName` column.
+1. Since we will eventually decommission the `Alex` user, move the `contracts` folder from Alex's desktop directory to `C:\`.
 
-    - Note the column header `LogName`. This header is also the parameter we need.
+  - First, make sure we're working out of Alex's desktop directory:
 
-3. Let's add parameters to our cmdlet to retrieve security logs:
+    - Run `Set-Location C:\Users\Alex\Desktop` to change directory.
 
-    - Run `Get-WinEvent -LogName Security -MaxEvents 100` to show only 100 events.
+    - This is the same as `cd` in Linux.
 
-    - Add the `ConvertTo-Json` cmdlet to convert the output to JSON format:
+  - Next, move `contracts` to `C:\`:
 
-      - Run `Get-WinEvent -LogName Security -MaxEvents 100 | ConvertTo-Json`
+    - Run `Move-Item contracts C:\` to move the `contracts` directory to the `C:\` directory.
 
-    - Pipe that output to a file:
+    - This is the same as `mv` in Linux.
 
-      - Run `Get-WinEvent -LogName Security -MaxEvents 100 | ConvertTo-Json | Out-File -FilePath "C:\Logs\RecentSecurityLogs.json"`
+  - Verify `contracts` is no longer in Alex's home directory:
 
-    Since we didn't see any confirmation output, let's check the contents of the logs:
+    - Run `Get-ChildItem C:\` to get a listing of the directories and files in `C:\`.
 
-    - Run `Get-Content C:\Logs\RecentSecurityLogs.json` to confirm the logs were created.
+    - This is the same as `ls` in Linux.
 
-    To get the latest 100 events from the application logs, run:
 
-    - `Get-WinEvent -LogName Application -MaxEvents 100 | ConvertTo-Json | Out-File -FilePath "C:\Logs\RecentApplicationLogs.json"`
+2. Create `Logs` and `Scripts`, `Backups` directories in `C:\`.
+
+   - Create the `C:\Logs`, `C:\Scripts`, and `C:\Backups` directories.
+
+  - Now, we want to work out of `C:\`.
+
+  - Run `Set-Location C:\`.
+
+  - Make the `Backups`, `Logs`, and `Scripts` directories:
+
+    - Type `New-Item -Path "C:\" -Name "Logs" -ItemType "Directory"`, but don't run it yet.
+
+    - When we use the `-ItemType "Directory"` parameters here, it changes the `New-Item` functionality from being like `touch` to `mkdir` in Linux.
+
+  - We can actually shorten this command a little and have it create all the directories:
+
+    - Edit the line to match the following:
+
+    - Run `New-Item "Logs", "Backups", "Scripts" -ItemType "Directory" -Force`
+
+    - This command will create all the directories in the current directory.
+
+    - This is similar to using _brace expansion_ with `mkdir`:  `mkdir {Logs, Backups, Scripts}`.
+
+    - The `-Force` parameter will ignore any errors if the directories already exist.
+
+3. Check the contents of the `C:\` directory to make sure the `Logs`, `Backups`, and `Scripts` directories exist.
+
+
+  - Run `Get-ChildItem` to show `contracts`, `Logs`, `Backups`, and `Scripts` in `C:\`. We now have the following directories:
+
+    - `C:\Backups`
+    - `C:\Logs`
+    - `C:\contracts`
+    - `C:\Scripts`
+
+**Bonus**
+
+4. Use `Rename-Item` to capitalize the `contracts` directory if it is not already.
+
+  - Use `Rename-Item` to capitalize the `contracts` directory. 
+
+    - `Rename-Item contracts Contracts` seems like the correct option (if you recall `mv` in bash), but the command actually errors out. 
+
+  - Instead, we use `Rename-Item` twice to change the directory name: 
+
+    - `Rename-Item contracts contracts1`
+
+    - `Rename-Item contracts1 Contracts`
 
 ---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
