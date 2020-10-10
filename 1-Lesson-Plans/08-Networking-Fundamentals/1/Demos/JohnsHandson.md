@@ -6,6 +6,7 @@
 https://www.avast.com/c-how-to-find-ip-address
 
 https://www.macworld.co.uk/how-to/mac/ip-address-3676112/#toc-3676112-6
+
 ipconfig getifaddr en0
 
 - Click on the http://whatismyip.host/
