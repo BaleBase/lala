@@ -29,3 +29,7 @@ In this activity, you will continue to be security analysts working for the Hill
 6. Transmit the encrypted message to your partner using Slack.
 
 7. After you receive your partner's encrypted message, decrypt it using your private key.
+
+---
+
+ © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

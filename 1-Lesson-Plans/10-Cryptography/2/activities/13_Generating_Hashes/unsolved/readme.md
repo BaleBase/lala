@@ -26,8 +26,6 @@ In this activity, you will continue to be a security analyst working for the Hil
 
 4. Use the `diff` command to figure out what was changed in the modified files.
 
---- 
+---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-
-  

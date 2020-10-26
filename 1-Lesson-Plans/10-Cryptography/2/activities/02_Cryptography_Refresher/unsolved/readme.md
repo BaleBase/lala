@@ -22,7 +22,8 @@ In this upcoming activity you will use your Key and IV that you had created in t
 3. After decrypting your partner's message, answer the following questions:
     - What method did you use to transfer the key and IV?
     - Is this a secure method for transmitting the key and IV? Why or why not?
----
- © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
+---
+
+ © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
