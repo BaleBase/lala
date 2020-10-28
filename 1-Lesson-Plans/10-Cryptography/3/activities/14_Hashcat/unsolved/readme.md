@@ -19,6 +19,7 @@ You will continue your role as a security analyst working for the Hill Valley Po
        *Hint: The hashing algorithm was created in 1992 by Ronald Rivest.*
 
 2. With the plaintext password, open the encrypted file with the command `unzip secret.zip` and confirm whether it contains the evidence needed to lock up the Alphabet Bandit. 
+
 ---
 
  © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

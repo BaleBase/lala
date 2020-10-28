@@ -17,7 +17,6 @@ You will continue your role as a security analyst working for the Hill Valley Po
 
 - Then, you will try to use Detective Tannen's password to log into their account and gather evidence that they are the Alphabet Bandit.
 
-
 ### Instructions
 
 1. Enter any plaintext into the Password Encrypter and determine the algorithm being used for encryption.
@@ -33,4 +32,5 @@ You will continue your role as a security analyst working for the Hill Valley Po
     - To test Tannen's Login password, run: `python3 password.py`.
 
 ---
+
  © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.

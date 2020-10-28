@@ -15,13 +15,13 @@ You will continue your role as a security analyst working for the Hill Valley Po
 
 1. Download the image of the car from [here](https://tinyurl.com/y4m3zftl) onto your virtual machine, then open the file. 
 
-1. Run `steghide` to determine if the image file contains a secret message.
+2. Run `steghide` to determine if the image file contains a secret message.
   
   - *Hint: The password is the brand of the car.* If you get stuck, ask your instructor or TA for help. 
 
-
-1. If the image contains a secret message, find out what it says.
+3. If the image contains a secret message, find out what it says.
 
 ---
+
  © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
