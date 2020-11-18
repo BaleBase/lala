@@ -99,7 +99,7 @@
 
 ### Unit 13: Project Week 1
 - [Homework Assignment](2-Homework/13-Github-Fundamentals)
-- [Week](1-Lesson-Plans/13-Elk-Stack-Project/Lessonplan.md)
+- [Week](1-Lesson-Plans/13-Elk-Stack-Project)
 
 
 ### Unit 14: Web Development
