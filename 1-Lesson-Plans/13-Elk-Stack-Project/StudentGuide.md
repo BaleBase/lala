@@ -237,8 +237,8 @@ In the context of this project, removing half of your variables could mean:
 Another effective strategy is to change _ONE_ thing and only _ONE_ thing before your retest. This is especially helpful when troubleshooting code. If you change several things before you re-test, you will not know if any one of those things has helped the situation or made it worse.
 
 
-- [Day 1 Activity File: ELK Installation](Activities/Stu_Day_1/Unsolved/ReadMe.md)
-- [Day 1 Resources](Activities/Stu_Day_1/Unsolved/Resources/)
+- [Day 1 Activity File: ELK Installation](1/Activities/01_Activity/Unsolved/ReadMe.md)
+- [Day 1 Resources](1/Activities/01_Activity/Unsolved/Resources/)
 
 #### References
 - Peer networking in Azure How-To: [Global vNet Peering](https://azure.microsoft.com/en-ca/blog/global-vnet-peering-now-generally-available/)
@@ -269,8 +269,8 @@ After installing Filebeat, you will install Metricbeat.
 
 ### Day 2 Activity: Filebeat Installation
 
-- [Day 2 Activity File: Filebeat Installation](Activities/Stu_Day_2/Unsolved/ReadMe.md)
-- [Day 2 Resources](Activities/Stu_Day_2/Unsolved/Resources/)
+- [Day 2 Activity File: Filebeat Installation](2/Activities/01_Activity/Unsolved/ReadMe.md)
+- [Day 2 Resources](2/Activities/01_Activity/Unsolved/Resources/)
 
 **Note:** The Resources folder includes an `ansible.cfg` file. You don't need to do anything with this file. It's included in case you accidentally edit or delete your configuration file.
 
@@ -282,13 +282,13 @@ On Day 3, if you need more time installing Filebeat on your DVWA machines, you c
 
 ### Day 3 Activity: Network Diagramming and README
 
-- [Day 3 Activity File: Network Diagramming and README](Activities/Stu_Day_3/Unsolved/ReadMe.md)
+- [Day 3 Activity File: Network Diagramming and README](3/Activities/01_Activity/Unsolved/ReadMe.md)
 
 - If you would like additional challenges, we have created optional Kibana activities
-  - [Optional Kibana Activities](/Activities/Kibana-Optional)
-    - [Linux Stress Optional Activity](Activities/Kibana-Optional/Linux-Stress/Unsolved)
-    - [SSH Barrage Optional Activity](Activities/Kibana-Optional/SSH-Barage/Unsolved)
-    - [Web Request Dos Optional Activity](Activities/Kibana-Optional/wget-DoS/Unsolved)
+  - [Optional Kibana Activities](3/Activities)
+    - [Linux Stress Optional Activity](3/Activities/03_Linux-Stress-Optional/Unsolved)
+    - [SSH Barrage Optional Activity](3/Activities/04_SSH-Barrage-Optional/Unsolved)
+    - [Web Request Dos Optional Activity](3/Activities/05_wget-DoS-Optional/Unsolved)
 ---
 
 ## Congratulations!
