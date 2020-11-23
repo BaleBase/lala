@@ -87,11 +87,11 @@ Review the partially reconstructed HTTP requests and responses. Answer the quest
      Connection: Closed
      ```
 
-   - **Questions:** 
+   **Questions:** 
       - What type of method was used in the request?
       - What file name was uploaded to the site, according to the request body?
 
-   - **Analysis:** 
+   **Analysis:** 
       - Based on the request method and request body, what do you think happened here? 
       - How did the server respond?
 
@@ -104,9 +104,10 @@ Review the partially reconstructed HTTP requests and responses. Answer the quest
      Cookie: $Version="1"; AUTH-COOKIE="sdf354s5c1s8e1s"; $Path="/admin"
      ```
 
-   - **Question:** Look back at the previous response (HTTP Response 3). What request and headers are seen in this GET request?
-
-   - **Analysis:** Is there anything interesting about the URL requested?
-
+   **Question:** Look back at the previous response (HTTP Response 3). What request and headers are seen in this GET request?
+    
+    **Analysis:** Is there anything interesting about the URL requested?
+    
 ---
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved. 
+
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
