@@ -51,4 +51,5 @@ After constructing and testing each `curl` command, answer the questions that fo
     - Where does the data end up?
 
 ---
+
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved. 
