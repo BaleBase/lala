@@ -11,7 +11,7 @@ In this activity, you will play the role of a DevOps engineer overseeing the pro
 
 1. First, deploy the microservices:
 
-    - Navigate to your `/home/sysadmin/Cybersecurity-Lesson-Plans/14-Web_Dev/deploying_testing_activity` directory. 
+    - Navigate to your `/home/sysadmin/Cybersecurity-Lesson-Plans/14-Web_Dev/deploying_testing_activity` directory.
 
     - Deploy the WordPress stack with `docker-compose up`.
     

@@ -20,7 +20,6 @@ In this activity, you will play the role of a systems engineer.
     
     - Your instructor should have sent this file along with the activity instructions. 
 
-
 4. Edit the diagram. As components are removed from the main rectangle, create a new rectangle to surround each individual component and label it accordingly. 
 
     - When you add a rectangle, right-click it and select **To Back** to make it look like it is behind the component. 
@@ -49,4 +48,3 @@ Your Customer Service department has been receiving complaints that the company'
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
