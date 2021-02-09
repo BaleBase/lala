@@ -102,7 +102,8 @@ Complete the following high-level steps:
 
 2. Document all exposed ports and services.
 
-3. Enumerate the WordPress site. One flag is discoverable after this step.
+3. Enumerate the WordPress site. Be aware that the home page is **not** part of the WordPress site but does have a link to it.  One flag is discoverable after this step.
+     - **Hint**: If you get the error **"The remote website is up, but does not seem to be running WordPress."**, you are using the wrong URL.  Look for others that look like they may be more applicable.
      - **Hint**: Look for the `Users` section in the output.
 
 4. Use SSH to gain a user shell. Two flags can be discovered at this step.
